@@ -13,7 +13,6 @@ Feature: User can view campaign details
         Then I should see 'Brain surgery'
         And I should see 'I grew up always helping others.'
         And I should see '1000'
-        And show me the page
         And I should see 'donate now'
         And I should see 'share on facebook'
         

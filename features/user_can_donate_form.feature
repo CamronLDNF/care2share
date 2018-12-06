@@ -20,5 +20,3 @@ Feature: User can see the campaigns on index page
         And I fill in "Email" with "hanna@tuna.se"
         And I fill in "Postal code" with "123456"
         And I click "Proceed to pay"
-
-        # And show me the page
