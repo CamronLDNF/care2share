@@ -16,6 +16,11 @@ Given('the following user exists') do |table|
     end
 end
 
+Given("I visit the {string} page") do |value|
+    campaign = Campaign.find_by(title: value)
+    visit campaign_path(campaign[:id])
+end
+
 When('stop') do
     binding.pry
 end

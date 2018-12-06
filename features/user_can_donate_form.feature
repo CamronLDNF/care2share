@@ -1,16 +1,15 @@
-Feature: User can see the campaigns on index page
+Feature: User can donate via a form
 
     As a User
     In order to donate
     I would like to see a donate form
     
-    Scenario: User can access the donation form to make a donation
+    Scenario: User can access the donation form and make a donation
         Given the following campaigns exists
         | title         | description                      | amount_raised |
         | Brain surgery | I grew up always helping others. | 1000.00       |
      
-        And I visit the campaign details site
-        Then I should see "Brain surgery"
+        And I visit the 'Brain surgery' page
         And I should see "I grew up always helping others."
         And I should see "1000"
         When I click "Donate now"
