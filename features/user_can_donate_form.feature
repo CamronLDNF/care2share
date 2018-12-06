@@ -12,7 +12,7 @@ Feature: User can donate via a form
         And I visit the 'Brain surgery' site
         And I should see "I grew up always helping others."
         And I should see "1000"
-        When I click "Donate now"
+        When I click "donate now"
         And I fill in "Enter your Donation" field with "500"
         And I fill in "First name" field with "Hanna"
         And I fill in "Last name" field with "Nyman"
