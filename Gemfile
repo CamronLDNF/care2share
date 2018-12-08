@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 gem 'devise'
+gem 'stripe-rails'
 
 
 group :development, :test do
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'launchy'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'stripe-ruby-mock', '~> 2.5.4', require: 'stripe_mock'
 end
 
 group :development do
