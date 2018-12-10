@@ -1,0 +1,31 @@
+// %link{href: "../../assets/stylesheets/donate_form.sass", rel: "stylesheet"}
+
+.donate_form_wrapper
+    = form_with url: donations_path, local: true, id: 'donate_form' do |form|
+        = form.hidden_field :campaign_id, value: @campaign_id
+        %p
+            = form.label :amount, 'Enter your donation'
+            %br/
+            = form.number_field :amount
+        %p
+            = form.label :firstname, 'First name'
+            %br/
+            = form.text_field :firstname
+        %p
+            = form.label :lastname, 'Last name'
+            %br/
+            = form.text_field :lastname
+        %p
+            = form.label :email
+            %br/
+            = form.email_field :email
+        %p
+            = form.label :postalcode, 'Postal code'
+            %br
+            = form.number_field :postalcode
+        %p
+            = form.label 'Credit or debit card' 
+            #card-element
+
+        %p#submit-payment
+            = form.submit 'Submit Payment'

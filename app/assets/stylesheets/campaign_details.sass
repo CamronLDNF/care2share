@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
+.container
+  display: grid
+  grid-template-columns: 3fr 1fr
+  grid-template-rows: auto repeat(3, auto)
+  font-family: Lato, sans-serif
+  text-rendering: optimizeLegibility
+  margin-left: 50px
+
+// .wrapper
+//   // text-shadow: 0.2px 0.2px #818181
+//   width: 60%
+//   border: 1px solid #818181
+//   border-radius: 4px
+//   background-color: transparent
+//   // background-color: #FBF8F6
+//   // background-color: blue
+
+.header_img
+  grid-column-start: 1
+  grid-column-end: span 1
+  grid-row-start: 1
+  grid-row-end: span 1
+  background-image: url("http://cryptoconsulting.info/wp-content/uploads/2018/10/Chairty-cover-image.jpg")
+  background-size: contain
+  background-position: left
+  background-repeat: no-repeat
+  margin-top: 50px
+
+.campaign_title
+  grid-column-start: 1
+  grid-column-end: span 1
+  grid-row-start: 2
+  grid-row-end: span 1
+  font-size: 3rem
+  margin-top: 20px
+
+.campaign_description
+  grid-column-start: 1
+  grid-column-end: span 1
+  grid-row-start: 3
+  grid-row-end: span 1
+  margin-top: 20px
+  margin-bottom: 50px
+  max-width: 650px
+
+.campaign_amount_raised
+  position: fixed
+  margin-left: 750px
+  margin-top: 170px
+  vertical-align: middle
+  text-align: center
+  padding-bottom: 10px
+  width: 300px
+  height: 80px
+  color: #818181
+  font-size: 1.5rem
+  font-weight: 900
+  padding: 1rem
+  line-height: 1.2
+  text-decoration: none
+  text-shadow: 0.2px 0.2px #818181
+  border: 1px solid transparent
+  border-radius: 4px
+  transition: background-color .25s ease-out,color .25s ease-out
+  box-shadow: 0 0.02rem 0.02rem 0.02rem
+
+
+.donate_button
+  position: fixed
+  margin-left: 750px
+  margin-top: 48px
+  background-color: #E08441
+  vertical-align: middle
+  text-align: center
+  cursor: pointer
+  width: 300px
+  height: 80px
+  color: #fff
+  font-size: 2rem
+  font-weight: 900
+  padding: 1rem
+  line-height: 1
+  text-decoration: none
+  text-shadow: 0.2px 0.2px #818181
+  border: 1px solid transparent
+  border-radius: 4px
+  transition: background-color .25s ease-out,color .25s ease-out
+  box-shadow: 0 0.02rem 0.02rem 0.02rem
+
+.donate_button:hover
+  background-color: #fff
+

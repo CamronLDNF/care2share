@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Care2share
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{src: 'https://js.stripe.com/v3/'}
+  %body
+    = render 'partials/navbar'
+
+    = notice
+
+    = yield
+
+  .contact
+    %p Contact Us
+    %br
+    %p support@care2share.com | Valhallavägen 79, 114 27, Stockholm, Sweden | +46 555 5555
+
+  .footer Copyright © Will-U-Fund-Me Foundation | Craft Academy

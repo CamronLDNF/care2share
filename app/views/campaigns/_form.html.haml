@@ -1,0 +1,44 @@
+%link{href: "../../assets/stylesheets/campaign_details.sass", rel: "stylesheet"}
+
+
+.campaign_wrapper
+    = form_with(model: campaign, local: true) do |form|
+        - if campaign.errors.any?
+            #error_explanation
+                %h2
+                    = pluralize(campaign.errors.count, "error")
+                    prohibited
+                    this campaign from being saved:
+                %ul
+                    - campaign.errors.full_messages.each do |msg|
+                        %li= msg   
+        %p.section
+            = form.label :goal
+            %br/
+            .input= form.text_field :goal
+        %p.section
+            = form.label :Company_name
+            %br/
+            = form.text_field :Company_name
+        %p.section
+            = form.label :Postal_code
+            %br/
+            = form.text_field :Postal_code
+        %p.section
+            = form.label :Category
+            %br/
+            = form.text_field :Category
+        %p.section
+            = form.label :title
+            %br/
+            = form.text_field :title
+        %p.section
+            = form.label :description
+            %br/
+            = form.text_area :description
+
+        
+        %p
+            = form.submit
+
+

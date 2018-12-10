@@ -1,0 +1,25 @@
+%link{href: "../../assets/stylesheets/admin.sass", rel: "stylesheet"}
+
+.container_admin
+    .login_section
+        - if user_signed_in?
+            -# %p= "Hello, #{current_user.firstname}!"
+            -# %p= link_to 'Log out', destroy_user_session_path, method: :delete
+            
+        - else
+            %p= link_to 'Sign up', new_user_registration_path
+            %p= link_to 'Log in', new_user_session_path
+
+    .campaign_list
+        %h1 Your of Campaigns
+        - @campaigns.each do |campaign|
+            .campaign_each
+                %p= link_to "#{campaign.title}", campaign
+                %p Story: #{campaign.description}
+                %p Amount Raised: #{campaign.amount_raised}
+                -if user_signed_in? && current_user == campaign.user
+                    %p= link_to 'Edit', edit_campaign_path(campaign)
+                    %p= link_to 'Delete', campaign_path(campaign),method: :delete, data: { confirm: 'Are you sure?' }
+            
+    .create_campaign   
+        %p= link_to 'Create a Campaign', new_campaign_path 

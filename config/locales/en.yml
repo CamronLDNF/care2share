@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            firstname: 
+              blank: "First name can't be blank"
+            lastname:
+              blank: "Last name can't be blank"
